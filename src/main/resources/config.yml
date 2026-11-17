@@ -1,0 +1,59 @@
+# EssGuard 1.0.0 — Paper 1.21.4
+# Observation-only: this build does not kick, ban, or modify player movement.
+
+safety:
+  join-grace-ms: 2500
+  teleport-grace-ms: 1400
+  velocity-grace-ms: 950
+  damage-grace-ms: 600
+  server-lag-ms: 150
+  max-sample-gap-ms: 130
+  max-ping-ms-for-movement: 450
+
+checks:
+  speed:
+    enabled: true
+    mild-ratio: 1.16
+    severe-ratio: 1.38
+    min-severe-step: 0.33
+    window-ticks: 10
+    window-ratio: 1.18
+    min-mild-samples: 6
+    strong-window-ratio: 1.30
+    min-severe-samples: 3
+    base-buffer: 0.045
+
+  fly:
+    enabled: true
+    hover-dy: 0.017
+    hover-min-horizontal: 0.075
+    physics-residual: 0.16
+    max-natural-rise-step: 0.48
+    hover-ticks: 14
+    residual-ticks: 6
+    rise-ticks: 3
+
+  jesus:
+    enabled: true
+    min-horizontal: 0.075
+    max-dy: 0.025
+    surface-ticks: 14
+
+  hitbox:
+    enabled: true
+    max-ping-allowance: 0.55
+    ping-blocks-per-ms: 0.0009
+    max-motion-allowance: 0.45
+    base-reach: 3.18
+    hard-reach: 3.65
+    extreme-reach: 4.00
+    min-facing-dot: 0.15
+
+alerts:
+  enabled: true
+  max-vl: 100.0
+  min-vl: 6.0
+  min-streak: 3
+  clean-windows-to-reset-streak: 4
+  cooldown-ms: 3000
+  decay-per-second: 0.15
