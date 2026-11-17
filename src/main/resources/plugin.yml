@@ -1,0 +1,23 @@
+name: EssGuard
+version: 1.0.0
+main: me.essde.essguard.EssGuard
+api-version: '1.21'
+author: essde342-bit
+description: Conservative observation-only anti-cheat for Paper 1.21.4
+
+commands:
+  essguard:
+    description: EssGuard administration
+    usage: /essguard reload
+    permission: essguard.admin
+
+permissions:
+  essguard.admin:
+    description: Allows reloading EssGuard
+    default: op
+  essguard.alerts:
+    description: Receives EssGuard alerts
+    default: op
+  essguard.bypass:
+    description: Exempts a player from EssGuard checks
+    default: false
